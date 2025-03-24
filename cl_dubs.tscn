@@ -1,6 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://divaejgfy2x5t"]
+[gd_scene load_steps=5 format=3 uid="uid://divaejgfy2x5t"]
+
+[ext_resource type="Texture2D" uid="uid://2gfie3jkmatr" path="res://Textures/Metal007_1K-JPG_Color.jpg" id="1_kv30p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odlxs"]
+albedo_texture = ExtResource("1_kv30p")
 
 [sub_resource type="SphereMesh" id="SphereMesh_80rqa"]
+material = SubResource("StandardMaterial3D_odlxs")
+uv2_padding = 2.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7n2bf"]
 
