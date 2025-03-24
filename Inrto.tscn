@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddm6o80kkrv7a"]
+
+[ext_resource type="Texture2D" uid="uid://cy5cpdoure86h" path="res://Textures/Marble012_1K-JPG_Color.jpg" id="1_ojuhq"]
+[ext_resource type="PackedScene" uid="uid://divaejgfy2x5t" path="res://cl_dubs.tscn" id="2_2kmee"]
+[ext_resource type="Script" path="res://cl_dubs.gd" id="3_yjvu2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8qyx"]
+albedo_texture = ExtResource("1_ojuhq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlvw3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wygl5"]
+
+[node name="Level 1" type="Node3D"]
+
+[node name="Floor" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_p8qyx")
+use_collision = true
+size = Vector3(50, 2, 50)
+material = SubResource("StandardMaterial3D_dlvw3")
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 24.9247, 6.3868, 0.0651684)
+use_collision = true
+size = Vector3(15, 2, 50)
+
+[node name="Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -25, 6.5, 0)
+use_collision = true
+size = Vector3(15, 2, 50)
+
+[node name="Wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 6.5, 25)
+use_collision = true
+size = Vector3(15, 2, 50)
+
+[node name="Wall4" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 6.5, -25)
+use_collision = true
+size = Vector3(15, 2, 50)
+material = SubResource("StandardMaterial3D_wygl5")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Wall4"]
+transform = Transform3D(1, 3.55271e-15, 0, -7.10543e-15, 1, 1.06581e-14, 0, -1.06581e-14, 1, -1.90735e-06, -13.5169, 5.90842e-07)
+operation = 2
+radius = 7.0
+height = 30.0
+sides = 50
+
+[node name="Not Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 18.3204, 6.3868, 8.74956)
+use_collision = true
+size = Vector3(15, 2, 15)
+
+[node name="Not Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37095e-08, -0.999957, -0.00928496, 1, -4.37114e-08, 0, -4.05859e-10, -0.00928496, 0.999957, 11.6443, 6.3868, 2.14715)
+use_collision = true
+size = Vector3(15, 2, 15)
+
+[node name="Not Wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.61031, 6.3868, -2.86261)
+use_collision = true
+size = Vector3(15, 2, 15)
+
+[node name="Not Wall4" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -13.2476, 6.3868, 8.88524)
+use_collision = true
+size = Vector3(15, 2, 23.0503)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.245662, -0.345961, 0.905517, -0.130983, 0.913729, 0.384634, -0.960465, -0.213097, 0.179153, 0, 20, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.170438, -0.866679, -0.468848, 0.260678, -0.4192, 0.869666, -0.950262, -0.270442, 0.154476, -18.5649, 18.2161, 2.22965)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.170438, -0.866679, -0.468848, -0.262813, -0.498557, 0.826057, -0.949674, -0.0175722, -0.312747, 10.6091, 14.9033, 4.32667)
+
+[node name="CL Dubs" parent="." instance=ExtResource("2_2kmee")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 18.604, 5, 18.525)
+slide_on_ceiling = false
+script = ExtResource("3_yjvu2")
+
+[node name="Camera3D" type="Camera3D" parent="CL Dubs"]
+transform = Transform3D(0.1, 0, 0, 0, 0.0840444, 0.0541899, 0, -0.0541899, 0.0840444, 0, 0.66688, 1.04898)
+current = true

@@ -1,2 +1,2 @@
-# Intro Game - New Version
+# IntroGame
  
