@@ -91,16 +91,22 @@ use_collision = true
 size = Vector3(12, 2, 15)
 
 [node name="Not Wall3" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.61, 4.9, -4.371)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 2.35549, 4.9, -4.371)
 material_override = SubResource("StandardMaterial3D_b01op")
+use_collision = true
+size = Vector3(12, 2, 20)
+
+[node name="Not Wall4" type="CSGBox3D" parent="."]
+transform = Transform3D(4.37114e-08, 1, -8.74228e-08, 1, -4.37114e-08, 0, -3.82137e-15, -8.74228e-08, -1, -4.10018, 4.9, 17.5809)
+material_override = SubResource("StandardMaterial3D_jh7jt")
 use_collision = true
 size = Vector3(12, 2, 15)
 
-[node name="Not Wall4" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -13.248, 4.9, 8.885)
+[node name="Not Wall5" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -14.8532, 2.16328, -13.9112)
 material_override = SubResource("StandardMaterial3D_jh7jt")
 use_collision = true
-size = Vector3(12, 2, 23.05)
+size = Vector3(3, 2, 20)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.245662, -0.345961, 0.905517, -0.130983, 0.913729, 0.384634, -0.960465, -0.213097, 0.179153, 0, 20, 0)
@@ -112,7 +118,7 @@ transform = Transform3D(0.170438, -0.866679, -0.468848, 0.260678, -0.4192, 0.869
 transform = Transform3D(0.170438, -0.866679, -0.468848, -0.262813, -0.498557, 0.826057, -0.949674, -0.0175722, -0.312747, 10.6091, 14.9033, 4.32667)
 
 [node name="CL Dubs" parent="." instance=ExtResource("2_2kmee")]
-transform = Transform3D(9.99773, 2.72678e-10, 0.21326, -0.0655999, 9.51514, 3.07536, -0.20292, -3.07606, 9.51297, 16.6396, 5, 17.6535)
+transform = Transform3D(-0.715, -3.92201, 6.93589, -0.198944, 6.97038, 3.921, -7.9655, 0.177958, -0.72051, 4.68178, 5, 11.2092)
 slide_on_ceiling = false
 script = ExtResource("3_yjvu2")
 
