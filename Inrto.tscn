@@ -1,10 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://ddm6o80kkrv7a"]
+[gd_scene load_steps=21 format=3 uid="uid://ddm6o80kkrv7a"]
 
 [ext_resource type="Texture2D" uid="uid://cy5cpdoure86h" path="res://Textures/Marble012_1K-JPG_Color.jpg" id="1_ojuhq"]
+[ext_resource type="Script" path="res://Label.gd" id="1_pmehu"]
 [ext_resource type="PackedScene" uid="uid://divaejgfy2x5t" path="res://cl_dubs.tscn" id="2_2kmee"]
 [ext_resource type="Texture2D" uid="uid://dq7f8kswrrhul" path="res://Textures/Bricks066_1K-JPG_Color.jpg" id="2_4jj8x"]
+[ext_resource type="Script" path="res://Time.gd" id="2_8w5xy"]
 [ext_resource type="Texture2D" uid="uid://n6r56x6ofph" path="res://Textures/Wood066_1K-JPG_Color.jpg" id="3_2xq0r"]
 [ext_resource type="Script" path="res://cl_dubs.gd" id="3_yjvu2"]
+[ext_resource type="PackedScene" uid="uid://de433pdsuy7xw" path="res://coin.tscn" id="6_gk6h1"]
+[ext_resource type="Script" path="res://coin.gd" id="7_pbj4u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8qyx"]
 albedo_texture = ExtResource("1_ojuhq")
@@ -39,6 +43,47 @@ albedo_texture = ExtResource("3_2xq0r")
 
 [node name="Level 1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317192, -2.44668, -17.657)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Coins" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = -962.0
+offset_bottom = -573.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.91, 0.802165, 0.1911, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Coins: 0"
+script = ExtResource("1_pmehu")
+
+[node name="Time" type="Label" parent="Control"]
+layout_mode = 0
+offset_top = 57.0
+offset_right = 143.0
+offset_bottom = 129.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Time = 5"
+script = ExtResource("2_8w5xy")
+
+[node name="Timer" type="Timer" parent="Control/Time"]
+autostart = true
 
 [node name="Floor" type="CSGBox3D" parent="."]
 material_override = SubResource("StandardMaterial3D_p8qyx")
@@ -79,34 +124,40 @@ height = 30.0
 sides = 50
 
 [node name="Not Wall" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 18.32, 4.9, 8.75)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 18.32, 4.9, 14.9859)
 material_override = SubResource("StandardMaterial3D_ct4d4")
 use_collision = true
-size = Vector3(12, 2, 15)
+size = Vector3(12, 1, 15)
 
 [node name="Not Wall2" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37095e-08, -0.999957, -0.00928496, 1, -4.37114e-08, 0, -4.05859e-10, -0.00928496, 0.999957, 11.644, 4.9, 2.147)
+transform = Transform3D(-4.37095e-08, -0.999957, -0.00928496, 1, -4.37114e-08, 0, -4.05859e-10, -0.00928496, 0.999957, 11.2299, 4.9, 8.97735)
 material_override = SubResource("StandardMaterial3D_5g3a1")
 use_collision = true
-size = Vector3(12, 2, 15)
+size = Vector3(12, 1, 13)
 
 [node name="Not Wall3" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 2.35549, 4.9, -4.371)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -1.67257, 4.9, 3.0085)
 material_override = SubResource("StandardMaterial3D_b01op")
 use_collision = true
-size = Vector3(12, 2, 20)
+size = Vector3(12, 1, 27)
 
 [node name="Not Wall4" type="CSGBox3D" parent="."]
-transform = Transform3D(4.37114e-08, 1, -8.74228e-08, 1, -4.37114e-08, 0, -3.82137e-15, -8.74228e-08, -1, -4.10018, 4.9, 17.5809)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -6.71246, 4.9, 14.1753)
 material_override = SubResource("StandardMaterial3D_jh7jt")
 use_collision = true
-size = Vector3(12, 2, 15)
+size = Vector3(12, 1, 15)
 
 [node name="Not Wall5" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37095e-08, -0.999957, -0.00928496, 1, -4.37114e-08, 0, -4.05859e-10, -0.00928496, 0.999957, -14.6896, 4.9, 8.67612)
+material_override = SubResource("StandardMaterial3D_5g3a1")
+use_collision = true
+size = Vector3(12, 1, 12)
+
+[node name="Beam" type="CSGBox3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -14.8532, 2.16328, -13.9112)
 material_override = SubResource("StandardMaterial3D_jh7jt")
 use_collision = true
-size = Vector3(3, 2, 20)
+size = Vector3(3, 3, 20)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.245662, -0.345961, 0.905517, -0.130983, 0.913729, 0.384634, -0.960465, -0.213097, 0.179153, 0, 20, 0)
@@ -118,10 +169,28 @@ transform = Transform3D(0.170438, -0.866679, -0.468848, 0.260678, -0.4192, 0.869
 transform = Transform3D(0.170438, -0.866679, -0.468848, -0.262813, -0.498557, 0.826057, -0.949674, -0.0175722, -0.312747, 10.6091, 14.9033, 4.32667)
 
 [node name="CL Dubs" parent="." instance=ExtResource("2_2kmee")]
-transform = Transform3D(-0.715, -3.92201, 6.93589, -0.198944, 6.97038, 3.921, -7.9655, 0.177958, -0.72051, 4.68178, 5, 11.2092)
+transform = Transform3D(-0.715, -3.92201, 6.93589, -0.198944, 6.97038, 3.921, -7.9655, 0.177958, -0.72051, 19.4093, 5, 19.6737)
 slide_on_ceiling = false
 script = ExtResource("3_yjvu2")
 
 [node name="Camera3D" type="Camera3D" parent="CL Dubs"]
 transform = Transform3D(0.1, 0, 0, 0, 0.0840444, 0.0541899, 0, -0.0541899, 0.0840444, 0, 0.66688, 1.04898)
 current = true
+
+[node name="Coin" parent="." instance=ExtResource("6_gk6h1")]
+transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, 5.01932, 2.00688, 8.64371)
+script = ExtResource("7_pbj4u")
+
+[node name="Timer" type="Timer" parent="Coin"]
+
+[node name="Coin2" parent="." instance=ExtResource("6_gk6h1")]
+transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, -21.1293, 4.06312, -13.6562)
+script = ExtResource("7_pbj4u")
+
+[node name="Timer" type="Timer" parent="Coin2"]
+
+[connection signal="timeout" from="Control/Time/Timer" to="Control/Time" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coin" to="Control/Coins" method="_on_area_3d_coin_collected"]
+[connection signal="body_entered" from="Coin2" to="Coin2" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coin2" to="Control/Coins" method="_on_area_3d_coin_collected"]

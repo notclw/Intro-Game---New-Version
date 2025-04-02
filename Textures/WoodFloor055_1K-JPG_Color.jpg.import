@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg2kwjg34oj7p"
-path.s3tc="res://.godot/imported/Metal001_1K-JPG_Metalness.jpg-4276b198ec21685d5a603031477a426c.s3tc.ctex"
+uid="uid://d3k5a47s686at"
+path.s3tc="res://.godot/imported/WoodFloor055_1K-JPG_Color.jpg-d153dbfe4a5d5b5795e76e6330f6fe54.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Metal001_1K-JPG_Metalness.jpg"
-dest_files=["res://.godot/imported/Metal001_1K-JPG_Metalness.jpg-4276b198ec21685d5a603031477a426c.s3tc.ctex"]
+source_file="res://Textures/WoodFloor055_1K-JPG_Color.jpg"
+dest_files=["res://.godot/imported/WoodFloor055_1K-JPG_Color.jpg-d153dbfe4a5d5b5795e76e6330f6fe54.s3tc.ctex"]
 
 [params]
 

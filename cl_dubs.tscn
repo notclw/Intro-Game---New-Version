@@ -8,8 +8,11 @@ albedo_texture = ExtResource("1_kv30p")
 [sub_resource type="SphereMesh" id="SphereMesh_80rqa"]
 material = SubResource("StandardMaterial3D_odlxs")
 uv2_padding = 2.2
+radius = 0.25
+height = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7n2bf"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [node name="CL Dubs" type="CharacterBody3D"]
 

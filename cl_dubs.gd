@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 8.8
+const JUMP_VELOCITY = 8.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -35,5 +35,6 @@ func _physics_process(delta):
 		$MeshInstance3D.rotate_x(deg_to_rad(6))
 	else:
 		velocity.z = move_toward(velocity.z, 0, .1)
+		velocity.x = move_toward(velocity.x, 0, .1 )
 
 	move_and_slide()
