@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Intro Game"
-run/main_scene="res://Inrto.tscn"
+run/main_scene="res://start.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
