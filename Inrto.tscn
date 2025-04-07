@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ddm6o80kkrv7a"]
+[gd_scene load_steps=24 format=3 uid="uid://ddm6o80kkrv7a"]
 
 [ext_resource type="Texture2D" uid="uid://cy5cpdoure86h" path="res://Textures/Marble012_1K-JPG_Color.jpg" id="1_ojuhq"]
 [ext_resource type="Script" path="res://Label.gd" id="1_pmehu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://cl_dubs.gd" id="3_yjvu2"]
 [ext_resource type="PackedScene" uid="uid://de433pdsuy7xw" path="res://coin.tscn" id="6_gk6h1"]
 [ext_resource type="Script" path="res://coin.gd" id="7_pbj4u"]
+[ext_resource type="PackedScene" uid="uid://ueuw56mbsn6" path="res://race car.tscn" id="10_unncv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8qyx"]
 albedo_texture = ExtResource("1_ojuhq")
@@ -40,6 +41,30 @@ albedo_texture = ExtResource("3_2xq0r")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jh7jt"]
 albedo_texture = ExtResource("3_2xq0r")
+
+[sub_resource type="Animation" id="Animation_44xs7"]
+resource_name = "it moves"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 18.4599, 1.17354, 4.87653, 1.1, 1, 20.3486, 1.17354, -17.1781, 2, 1, 18.4599, 1.17354, 4.87653, 2.0001, 1, 19.6411, 1.17354, 4.87653)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 2, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0abwy"]
+_data = {
+"it moves": SubResource("Animation_44xs7")
+}
 
 [node name="Level 1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317192, -2.44668, -17.657)
@@ -190,16 +215,25 @@ transform = Transform3D(0.1, 0, 0, 0, 0.0840444, 0.0541899, 0, -0.0541899, 0.084
 current = true
 
 [node name="Coin" parent="." instance=ExtResource("6_gk6h1")]
-transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, 5.01932, 2.00688, 8.64371)
+transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, 5.01932, 4.95823, 8.64371)
 script = ExtResource("7_pbj4u")
 
 [node name="Timer" type="Timer" parent="Coin"]
 
 [node name="Coin2" parent="." instance=ExtResource("6_gk6h1")]
-transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, -21.1293, 4.06312, -2.04246)
+transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, -21.1293, 6.28476, -2.04246)
 script = ExtResource("7_pbj4u")
 
 [node name="Timer" type="Timer" parent="Coin2"]
+
+[node name="Race Car" parent="." instance=ExtResource("10_unncv")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 18.4599, 1.17354, 4.87653)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Race Car"]
+autoplay = "it moves"
+libraries = {
+"": SubResource("AnimationLibrary_0abwy")
+}
 
 [connection signal="timeout" from="Control/Time/Timer" to="Control/Time" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
