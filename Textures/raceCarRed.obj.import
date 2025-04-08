@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crl3muheg7jjh"
+path="res://.godot/imported/raceCarRed.obj-53b8e9d447ea240af7914f6b5b8fcdee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/raceCarRed.obj-53b8e9d447ea240af7914f6b5b8fcdee.mesh"]
+
+source_file="res://Textures/raceCarRed.obj"
+dest_files=["res://.godot/imported/raceCarRed.obj-53b8e9d447ea240af7914f6b5b8fcdee.mesh", "res://.godot/imported/raceCarRed.obj-53b8e9d447ea240af7914f6b5b8fcdee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

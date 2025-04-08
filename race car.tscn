@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ueuw56mbsn6"]
+
+[ext_resource type="ArrayMesh" uid="uid://crl3muheg7jjh" path="res://Textures/raceCarRed.obj" id="1_evtwj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n3t5n"]
+size = Vector3(0.80214, 0.448561, 1.75257)
+
+[node name="Node3D" type="Area3D"]
+
+[node name="RaceCarRed" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114259, 0, -0.0327787)
+mesh = ExtResource("1_evtwj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0992578, 0.197803, 0)
+shape = SubResource("BoxShape3D_n3t5n")
