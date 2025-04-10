@@ -276,7 +276,7 @@ transform = Transform3D(0.170438, -0.866679, -0.468848, 0.260678, -0.4192, 0.869
 transform = Transform3D(0.170438, -0.866679, -0.468848, -0.262813, -0.498557, 0.826057, -0.949674, -0.0175722, -0.312747, 10.6091, 14.9033, 4.32667)
 
 [node name="CL Dubs" parent="." instance=ExtResource("2_2kmee")]
-transform = Transform3D(-0.715, -3.92201, 6.93589, -0.198944, 6.97038, 3.921, -7.9655, 0.177958, -0.72051, 19.4093, 5, 19.6737)
+transform = Transform3D(-0.715, -3.92201, 6.93589, -0.198944, 6.97038, 3.921, -7.9655, 0.177958, -0.72051, 18.7661, 5, 20.1489)
 slide_on_ceiling = false
 script = ExtResource("3_yjvu2")
 
@@ -285,7 +285,7 @@ transform = Transform3D(0.1, 0, 0, 0, 0.0840444, 0.0541899, 0, -0.0541899, 0.084
 current = true
 
 [node name="Coin" parent="." instance=ExtResource("6_gk6h1")]
-transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, 5.01932, 4.95823, 8.64371)
+transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, -8.43837, 4.95823, 8.64371)
 script = ExtResource("7_pbj4u")
 
 [node name="Timer" type="Timer" parent="Coin"]
