@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://cl_dubs.gd" id="3_yjvu2"]
 [ext_resource type="PackedScene" uid="uid://de433pdsuy7xw" path="res://coin.tscn" id="6_gk6h1"]
 [ext_resource type="Script" path="res://coin.gd" id="7_pbj4u"]
-[ext_resource type="PackedScene" uid="uid://ueuw56mbsn6" path="res://race car.tscn" id="10_unncv"]
+[ext_resource type="PackedScene" path="res://race car.tscn" id="10_unncv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8qyx"]
 albedo_texture = ExtResource("1_ojuhq")
