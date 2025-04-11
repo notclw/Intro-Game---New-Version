@@ -16,3 +16,4 @@ func _on_area_3d_coin_collected():
 	print("Coin collected")
 	totalCoins = totalCoins + 1
 	text = "Coins: " + str(totalCoins)
+
