@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfrumg3runxkk"
+path="res://.godot/imported/tinker.obj-b542c83c10a270a3192872c4adb9cf79.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tinker.obj-b542c83c10a270a3192872c4adb9cf79.mesh"]
+
+source_file="res://3D models/tinker.obj"
+dest_files=["res://.godot/imported/tinker.obj-b542c83c10a270a3192872c4adb9cf79.mesh", "res://.godot/imported/tinker.obj-b542c83c10a270a3192872c4adb9cf79.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

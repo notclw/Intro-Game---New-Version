@@ -66,7 +66,7 @@ _data = {
 "it moves": SubResource("Animation_44xs7")
 }
 
-[node name="Level 1" type="Node3D"]
+[node name="Base Node" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317192, -2.44668, -17.657)
 
 [node name="Control" type="Control" parent="."]
@@ -185,7 +185,7 @@ use_collision = true
 size = Vector3(17.8487, 2, 50)
 
 [node name="Wall11" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.22302e-07, -1, 0, 5.08567, -4.37114e-08, 0, 0, 0, 0.458842, -11.5343, -31.1107, -36.9279)
+transform = Transform3D(-2.22302e-07, -1, 0, 5.08567, -4.37114e-08, 0, 0, 0, 0.458842, -11.5343, -31.3634, -36.9279)
 material_override = SubResource("StandardMaterial3D_hmjxx")
 use_collision = true
 size = Vector3(17.8487, 2, 50)

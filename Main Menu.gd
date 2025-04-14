@@ -1,20 +1,16 @@
-extends Area3D
-
-signal coinCollected
+extends Button
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	rotate_x(deg_to_rad(2))
-	rotate_y(deg_to_rad(2))
-	rotate_z(deg_to_rad(2))
+	pass
 
 
-func _on_body_entered(body):
-	emit_signal("coinCollected")
-	queue_free()
-	
+
+func _on_pressed():
+	get_tree().change_scene_to_file("res://start.tscn") # Replace with function body.
