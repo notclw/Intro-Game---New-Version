@@ -248,17 +248,41 @@ material_override = SubResource("StandardMaterial3D_5g3a1")
 use_collision = true
 size = Vector3(12, 1, 12)
 
-[node name="Not Wall6" type="CSGBox3D" parent="."]
+[node name="6" type="CSGBox3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.64484, 4.9, -7.63756)
 material_override = SubResource("StandardMaterial3D_b01op")
 use_collision = true
 size = Vector3(12, 1, 40)
 
-[node name="Not Wall7" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37095e-08, -0.999957, -0.00928496, 1, -4.37114e-08, 0, -4.05859e-10, -0.00928496, 0.999957, 9.51518, 4.9, -20.4854)
+[node name="7" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37095e-08, -0.999957, -0.00928496, 1, -4.37114e-08, 0, -4.05859e-10, -0.00928496, 0.999957, 7.937, -61, -5.01957)
 material_override = SubResource("StandardMaterial3D_5g3a1")
 use_collision = true
-size = Vector3(12, 1, 8)
+size = Vector3(12, 1, 38)
+
+[node name="Not Wall8" type="CSGBox3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -2.61507, -61, -12.9912)
+material_override = SubResource("StandardMaterial3D_5g3a1")
+use_collision = true
+size = Vector3(12, 1, 22)
+
+[node name="Not Wall9" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -14.0994, -61, 0.0143757)
+material_override = SubResource("StandardMaterial3D_5g3a1")
+use_collision = true
+size = Vector3(12, 1, 27)
+
+[node name="Not Wall10" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -5.99635, -61, 4.80545)
+material_override = SubResource("StandardMaterial3D_5g3a1")
+use_collision = true
+size = Vector3(12, 1, 18)
+
+[node name="Not Wall11" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 1.16061, -61, 4.80545)
+material_override = SubResource("StandardMaterial3D_5g3a1")
+use_collision = true
+size = Vector3(12, 1, 18)
 
 [node name="Beam" type="CSGBox3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -14.8532, 2.16328, -5.79955)
@@ -294,7 +318,7 @@ transform = Transform3D(0.170438, -0.866679, -0.468848, 0.260678, -0.4192, 0.869
 transform = Transform3D(0.170438, -0.866679, -0.468848, -0.262813, -0.498557, 0.826057, -0.949674, -0.0175722, -0.312747, 10.6091, 14.9033, 4.32667)
 
 [node name="CL Dubs" parent="." instance=ExtResource("2_2kmee")]
-transform = Transform3D(-0.738937, -2.62489, 7.5209, -0.0691068, 7.55502, 2.63, -7.9655, 0.177958, -0.72051, 18.7661, 5, 20.1489)
+transform = Transform3D(-0.742034, -1.76556, 7.76738, 0.0137701, 7.80071, 1.77445, -7.9655, 0.177958, -0.72051, 20.5943, 6.90989, 21.0054)
 slide_on_ceiling = false
 script = ExtResource("3_yjvu2")
 

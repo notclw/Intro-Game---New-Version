@@ -1,8 +1,6 @@
 extends Label
 
-var time = 60
-
-var timeleft = 0         
+var time = 60      
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
