@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dec16a1cqfjq5"]
+[gd_scene load_steps=3 format=3 uid="uid://cf7blfo53k2ip"]
 
 [ext_resource type="Script" path="res://Play.gd" id="1_conof"]
 [ext_resource type="Script" path="res://Main Menu.gd" id="2_vsjsu"]
@@ -80,6 +80,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -2.0
 offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
