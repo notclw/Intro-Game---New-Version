@@ -1,6 +1,6 @@
-extends Label
+extends Area3D
 
-var totalCoins = 0
+signal lifeLost
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -8,11 +8,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	rotate_x(deg_to_rad(2))
 
 
 
-func _on_area_3d_coin_collected():
-	print("Coin collected")
-	totalCoins = totalCoins + 1
-	text = "Coins: " + str(totalCoins)
+func _on_body_entered(body):
+	emit_signal("lifeLost")
+	queue_free()

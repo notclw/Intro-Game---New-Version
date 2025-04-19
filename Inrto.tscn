@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ddm6o80kkrv7a"]
+[gd_scene load_steps=27 format=3 uid="uid://ddm6o80kkrv7a"]
 
 [ext_resource type="Texture2D" uid="uid://cy5cpdoure86h" path="res://Textures/Marble012_1K-JPG_Color.jpg" id="1_ojuhq"]
 [ext_resource type="Script" path="res://Label.gd" id="1_pmehu"]
@@ -6,10 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://dq7f8kswrrhul" path="res://Textures/Bricks066_1K-JPG_Color.jpg" id="2_4jj8x"]
 [ext_resource type="Script" path="res://Time.gd" id="2_8w5xy"]
 [ext_resource type="Texture2D" uid="uid://n6r56x6ofph" path="res://Textures/Wood066_1K-JPG_Color.jpg" id="3_2xq0r"]
+[ext_resource type="Script" path="res://Lives.gd" id="3_fm0cn"]
 [ext_resource type="Script" path="res://cl_dubs.gd" id="3_yjvu2"]
 [ext_resource type="PackedScene" uid="uid://de433pdsuy7xw" path="res://coin.tscn" id="6_gk6h1"]
 [ext_resource type="Script" path="res://coin.gd" id="7_pbj4u"]
 [ext_resource type="PackedScene" uid="uid://ueuw56mbsn6" path="res://race car.tscn" id="10_unncv"]
+[ext_resource type="PackedScene" uid="uid://c2y3xjua4cuaw" path="res://buzzsaw.tscn" id="11_js8pn"]
+[ext_resource type="Script" path="res://buzzsaw.gd" id="12_q4vr1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8qyx"]
 albedo_texture = ExtResource("1_ojuhq")
@@ -101,10 +104,16 @@ text = "Coins: 0"
 script = ExtResource("1_pmehu")
 
 [node name="Time" type="Label" parent="Control"]
-layout_mode = 0
-offset_top = 57.0
-offset_right = 143.0
-offset_bottom = 129.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 61.0
+offset_right = -946.0
+offset_bottom = -514.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -115,6 +124,23 @@ script = ExtResource("2_8w5xy")
 [node name="Timer" type="Timer" parent="Control/Time"]
 autostart = true
 
+[node name="Lives" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 118.0
+offset_right = -955.0
+offset_bottom = -457.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Lives: 1"
+script = ExtResource("3_fm0cn")
+
 [node name="Floor" type="CSGBox3D" parent="."]
 material_override = SubResource("StandardMaterial3D_p8qyx")
 use_collision = true
@@ -122,17 +148,17 @@ size = Vector3(50, 2, 50)
 material = SubResource("StandardMaterial3D_dlvw3")
 
 [node name="Floor2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.199009, -67.2292, 0.348072)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.199009, -66.4812, 0.348072)
 material_override = SubResource("StandardMaterial3D_p8qyx")
 use_collision = true
 size = Vector3(50, 2, 50)
 material = SubResource("StandardMaterial3D_dlvw3")
 
 [node name="Floor3" type="CSGBox3D" parent="."]
-transform = Transform3D(0.404521, 0, 0, 0, 0.386821, 0, 0, 0, 0.429341, 0, -66.6015, -35.5774)
+transform = Transform3D(0.404521, 0, 0, 0, 0.386821, 0, 0, 0, 0.429341, 0, -65.8471, -35.2329)
 material_override = SubResource("StandardMaterial3D_p8qyx")
 use_collision = true
-size = Vector3(50, 2, 50.95)
+size = Vector3(50, 2, 50)
 material = SubResource("StandardMaterial3D_dlvw3")
 
 [node name="Wall" type="CSGBox3D" parent="."]
@@ -172,28 +198,28 @@ use_collision = true
 size = Vector3(15, 2, 50)
 
 [node name="Wall9" type="CSGBox3D" parent="."]
-transform = Transform3D(9.71713e-15, 4.37114e-08, 0.458842, 5.08567, -4.37114e-08, 0, 2.22302e-07, 1, -2.00566e-08, 0, -31.3148, -47.5181)
+transform = Transform3D(9.71713e-15, 4.37114e-08, 0.458842, 5.08567, -4.37114e-08, 0, 2.22302e-07, 1, -2.00566e-08, 0, -26.7, -47.518)
 material_override = SubResource("StandardMaterial3D_hmjxx")
 use_collision = true
-size = Vector3(17.8487, 2, 50)
+size = Vector3(16, 2, 50)
 
 [node name="Wall12" type="CSGBox3D" parent="."]
-transform = Transform3D(5.20778e-15, 4.37114e-08, 0.458842, 2.7256, -4.37114e-08, 0, 1.1914e-07, 1, -2.00566e-08, 0, -26.9881, -25.0603)
+transform = Transform3D(-0.00637447, 4.38135e-08, 0.458841, 2.72559, -4.3609e-08, 0.00107311, 1.1914e-07, 1, -2.00566e-08, 0, -26.9881, -25.0603)
 material_override = SubResource("StandardMaterial3D_hmjxx")
 use_collision = true
 size = Vector3(19.1175, 2, 50)
 
 [node name="Wall10" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.22302e-07, -1, 0, 5.08567, -4.37114e-08, 0, 0, 0, 0.458842, 11.2218, -31.4079, -36.9279)
+transform = Transform3D(-2.22302e-07, -1, 0, 5.08567, -4.37114e-08, 0, 0, 0, 0.458842, 11.222, -26.7, -36.928)
 material_override = SubResource("StandardMaterial3D_hmjxx")
 use_collision = true
-size = Vector3(17.8487, 2, 50)
+size = Vector3(16, 2, 50)
 
 [node name="Wall11" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.22302e-07, -1, 0, 5.08567, -4.37114e-08, 0, 0, 0, 0.458842, -11.5343, -31.3634, -36.9279)
+transform = Transform3D(-2.22302e-07, -1, 0, 5.08567, -4.37114e-08, 0, 0, 0, 0.458842, -11.534, -26.7, -36.928)
 material_override = SubResource("StandardMaterial3D_hmjxx")
 use_collision = true
-size = Vector3(17.8487, 2, 50)
+size = Vector3(16, 2, 50)
 
 [node name="Wall4" type="CSGBox3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 6.5, -25)
@@ -203,7 +229,7 @@ size = Vector3(15, 2, 50)
 material = SubResource("StandardMaterial3D_wygl5")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Wall4"]
-transform = Transform3D(1, 3.55271e-15, 0, -7.10543e-15, 1, 1.06581e-14, 0, -1.06581e-14, 1, -1.90735e-06, -13.5169, 5.90842e-07)
+transform = Transform3D(1, 4.44089e-16, 0, -7.10543e-15, 0.112029, 1.06581e-14, 0, -1.33227e-15, 1, -1.43051e-06, -0.0965538, 0)
 operation = 2
 radius = 7.0
 height = 30.0
@@ -217,7 +243,7 @@ size = Vector3(15, 2, 50)
 material = SubResource("StandardMaterial3D_wygl5")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Wall8"]
-transform = Transform3D(1, 3.55271e-15, 0, -7.10543e-15, 1, 1.06581e-14, 0, -1.06581e-14, 1, -7.62939e-06, -13.5169, 5.36442e-07)
+transform = Transform3D(1, 4.44089e-16, 0, -7.10543e-15, 0.158116, 1.06581e-14, 0, -1.33227e-15, 1, -7.62939e-06, -0.814907, -2.98023e-08)
 operation = 2
 radius = 7.0
 height = 30.0
@@ -290,10 +316,10 @@ use_collision = true
 size = Vector3(12, 1, 18)
 
 [node name="Beam" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -14.8532, 2.16328, -5.79955)
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -14.8532, 1.23652, -5.79955)
 material_override = SubResource("StandardMaterial3D_jh7jt")
 use_collision = true
-size = Vector3(3, 3, 20)
+size = Vector3(1, 3, 20)
 
 [node name="Beam2" type="CSGBox3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -23.1771, 3.35248, -11.3624)
@@ -308,7 +334,7 @@ use_collision = true
 size = Vector3(1, 3, 3)
 
 [node name="Beam4" type="CSGBox3D" parent="."]
-transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -17.4938, 7.84737, -22.6349)
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -18.0296, 8.6421, -22.6349)
 material_override = SubResource("StandardMaterial3D_jh7jt")
 use_collision = true
 size = Vector3(1, 3, 3)
@@ -346,20 +372,24 @@ script = ExtResource("7_pbj4u")
 wait_time = 0.3
 
 [node name="Coin3" parent="." instance=ExtResource("6_gk6h1")]
-transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, -7.6094, 11.8555, -21.6459)
+transform = Transform3D(4.10396, 0, 0, 0, 4.10396, 0, 0, 0, 4.10396, -10.5939, 11.893, -21.6459)
 script = ExtResource("7_pbj4u")
 
 [node name="Timer" type="Timer" parent="Coin3"]
 wait_time = 0.3
 
 [node name="Race Car" parent="." instance=ExtResource("10_unncv")]
-transform = Transform3D(7.99692, 0, -0.221977, 0, 8, 0, 0.221977, 0, 7.99692, 20.65, 1.17354, -3.16325)
+transform = Transform3D(7.99692, 0, -0.221977, 0, 8, 0, 0.221977, 0, 7.99692, 20.8229, 1.17354, 4.87653)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Race Car"]
 autoplay = "it moves"
 libraries = {
 "": SubResource("AnimationLibrary_0abwy")
 }
+
+[node name="Buzzsaw" parent="." instance=ExtResource("11_js8pn")]
+transform = Transform3D(-2.62267e-07, -0.0178023, 5.99997, -7.78165e-10, 5.99997, 0.0178023, -6, 0, -2.62268e-07, 16.612, -61, -18.507)
+script = ExtResource("12_q4vr1")
 
 [connection signal="timeout" from="Control/Time/Timer" to="Control/Time" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
@@ -368,3 +398,5 @@ libraries = {
 [connection signal="coinCollected" from="Coin2" to="Control/Coins" method="_on_area_3d_coin_collected"]
 [connection signal="body_entered" from="Coin3" to="Coin3" method="_on_body_entered"]
 [connection signal="coinCollected" from="Coin3" to="Control/Coins" method="_on_area_3d_coin_collected"]
+[connection signal="body_entered" from="Buzzsaw" to="Buzzsaw" method="_on_body_entered"]
+[connection signal="lifeLost" from="Buzzsaw" to="Control/Lives" method="_on_buzzsaw_life_lost"]

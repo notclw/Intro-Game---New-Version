@@ -3,9 +3,11 @@
 [ext_resource type="ArrayMesh" uid="uid://ctqltrwl3dlwx" path="res://3D models/Coin/tinker.obj" id="1_vkcyd"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_173i6"]
-height = 0.138919
+height = 0.1
+radius = 0.48
 
 [node name="Area3D" type="Area3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Tinker" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.379643, -0.0436198, -0.367611)
