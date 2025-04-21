@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ddm6o80kkrv7a"]
+[gd_scene load_steps=28 format=3 uid="uid://ddm6o80kkrv7a"]
 
 [ext_resource type="Texture2D" uid="uid://cy5cpdoure86h" path="res://Textures/Marble012_1K-JPG_Color.jpg" id="1_ojuhq"]
 [ext_resource type="Script" path="res://Label.gd" id="1_pmehu"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ueuw56mbsn6" path="res://race car.tscn" id="10_unncv"]
 [ext_resource type="PackedScene" uid="uid://c2y3xjua4cuaw" path="res://buzzsaw.tscn" id="11_js8pn"]
 [ext_resource type="Script" path="res://buzzsaw.gd" id="12_q4vr1"]
+[ext_resource type="PackedScene" uid="uid://x3ypw8lxkiav" path="res://transparent.tscn" id="14_7bt7u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8qyx"]
 albedo_texture = ExtResource("1_ojuhq")
@@ -155,10 +156,10 @@ size = Vector3(50, 2, 50)
 material = SubResource("StandardMaterial3D_dlvw3")
 
 [node name="Floor3" type="CSGBox3D" parent="."]
-transform = Transform3D(0.404521, 0, 0, 0, 0.386821, 0, 0, 0, 0.429341, 0, -65.8471, -35.2329)
+transform = Transform3D(0.404521, 0, 0, 0, 0.386821, 0, 0, 0, 0.429341, -0.256163, -65.8471, -35.2963)
 material_override = SubResource("StandardMaterial3D_p8qyx")
 use_collision = true
-size = Vector3(50, 2, 50)
+size = Vector3(52, 2, 52)
 material = SubResource("StandardMaterial3D_dlvw3")
 
 [node name="Wall" type="CSGBox3D" parent="."]
@@ -390,6 +391,9 @@ libraries = {
 [node name="Buzzsaw" parent="." instance=ExtResource("11_js8pn")]
 transform = Transform3D(-2.62267e-07, -0.0178023, 5.99997, -7.78165e-10, 5.99997, 0.0178023, -6, 0, -2.62268e-07, 16.612, -61, -18.507)
 script = ExtResource("12_q4vr1")
+
+[node name="Node3D" parent="." instance=ExtResource("14_7bt7u")]
+transform = Transform3D(21, 0, 0, 0, 1, 0, 0, 0, 21, -0.317192, -26.8962, -36.4661)
 
 [connection signal="timeout" from="Control/Time/Timer" to="Control/Time" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
