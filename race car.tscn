@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://crl3muheg7jjh" path="res://Textures/raceCarRed.obj" id="1_evtwj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3t5n"]
-size = Vector3(0.80214, 0.448561, 1.75257)
+size = Vector3(0.8, 0.5, 1.5)
 
 [node name="Node3D" type="StaticBody3D"]
 
