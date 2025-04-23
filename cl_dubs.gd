@@ -39,3 +39,6 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+func _on_node_3d_body_entered(body):
+	print("CL Dubs just got touched")
+	emit_signal("moreTime")

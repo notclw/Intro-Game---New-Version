@@ -20,3 +20,6 @@ func _on_timer_timeout():
 	if time == 0:
 		$Timer.stop()
 		get_tree().change_scene_to_file("res://game over.tscn")
+
+func _on_cl_dubs_more_time():
+	text = str("Time: ",75)
