@@ -49,7 +49,11 @@ albedo_texture = ExtResource("3_2xq0r")
 
 [sub_resource type="Animation" id="Animation_44xs7"]
 resource_name = "it moves"
+<<<<<<< HEAD
+length = 5.0
+=======
 length = 10.0
+>>>>>>> 999d1d2a59ba4b075899fefeadf2c6f6321ac8da
 loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = false
@@ -57,6 +61,9 @@ tracks/0/enabled = true
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
+<<<<<<< HEAD
+tracks/0/keys = PackedFloat32Array(0, 1, 18.4599, 1.17354, 4.87653, 2.5, 1, 20.3486, 1.17354, -17.1781, 5, 1, 19.6411, 1.17354, 4.87653)
+=======
 tracks/0/keys = PackedFloat32Array(0, 1, 20.8229, 1.17354, 4.87653, 2.5, 1, 20.3486, 1.17354, -17.1781, 5, 1, -15.4786, 1.17354, -17.1781, 7.5, 1, 20.3486, 1.17354, -17.1781, 10, 1, 20.8229, 1.17354, 4.87653)
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -70,6 +77,7 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, -0.0277507, 0), Vector3(0, -0.0277507, 0), Vector3(0, 1.56584, 0), Vector3(0, 1.56584, 0), Vector3(0, -0.0277507, 0)]
 }
+>>>>>>> 999d1d2a59ba4b075899fefeadf2c6f6321ac8da
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0abwy"]
 _data = {
@@ -157,7 +165,11 @@ size = Vector3(50, 2, 50)
 material = SubResource("StandardMaterial3D_dlvw3")
 
 [node name="Floor3" type="CSGBox3D" parent="."]
+<<<<<<< HEAD
+transform = Transform3D(0.404521, 0, 0, 0, 0.386821, 0, 0, 0, 0.429341, 0, -65.9068, -35.8742)
+=======
 transform = Transform3D(0.404521, 0, 0, 0, 0.386821, 0, 0, 0, 0.429341, -0.256163, -65.8471, -35.2963)
+>>>>>>> 999d1d2a59ba4b075899fefeadf2c6f6321ac8da
 material_override = SubResource("StandardMaterial3D_p8qyx")
 use_collision = true
 size = Vector3(52, 2, 52)
@@ -206,7 +218,11 @@ use_collision = true
 size = Vector3(16, 2, 50)
 
 [node name="Wall12" type="CSGBox3D" parent="."]
+<<<<<<< HEAD
+transform = Transform3D(5.20778e-15, 4.37114e-08, 0.458842, 2.7256, -4.37114e-08, 0, 1.1914e-07, 1, -2.00566e-08, 0, -26.9881, -24.9375)
+=======
 transform = Transform3D(-0.00637447, 4.38135e-08, 0.458841, 2.72559, -4.3609e-08, 0.00107311, 1.1914e-07, 1, -2.00566e-08, 0, -26.9881, -25.0603)
+>>>>>>> 999d1d2a59ba4b075899fefeadf2c6f6321ac8da
 material_override = SubResource("StandardMaterial3D_hmjxx")
 use_collision = true
 size = Vector3(19.1175, 2, 50)
@@ -245,7 +261,11 @@ size = Vector3(15, 2, 50)
 material = SubResource("StandardMaterial3D_wygl5")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Wall8"]
+<<<<<<< HEAD
+transform = Transform3D(1, 3.55271e-15, 0, -7.10543e-15, 1, 1.06581e-14, 0, -1.06581e-14, 1, -3.8147e-06, -13.5169, 5.66244e-07)
+=======
 transform = Transform3D(1, 4.44089e-16, 0, -7.10543e-15, 0.158116, 1.06581e-14, 0, -1.33227e-15, 1, -7.62939e-06, -0.814907, -2.98023e-08)
+>>>>>>> 999d1d2a59ba4b075899fefeadf2c6f6321ac8da
 operation = 2
 radius = 7.0
 height = 30.0
@@ -381,7 +401,11 @@ script = ExtResource("7_pbj4u")
 wait_time = 0.3
 
 [node name="Race Car" parent="." instance=ExtResource("10_unncv")]
+<<<<<<< HEAD
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 19.3845, 1.17354, -5.91997)
+=======
 transform = Transform3D(7.99692, 0, -0.221977, 0, 8, 0, 0.221977, 0, 7.99692, 20.8229, 1.17354, 4.87653)
+>>>>>>> 999d1d2a59ba4b075899fefeadf2c6f6321ac8da
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Race Car"]
 autoplay = "it moves"
