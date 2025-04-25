@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ctqltrwl3dlwx"
-path="res://.godot/imported/tinker.obj-4775efc5fc03ef1cf36f579e8d17e08e.mesh"
+path="res://.godot/imported/tinker.obj-4cab8745afb5a01618f519ec697dca80.mesh"
 
 [deps]
 
-files=["res://.godot/imported/tinker.obj-4775efc5fc03ef1cf36f579e8d17e08e.mesh"]
+files=["res://.godot/imported/tinker.obj-4cab8745afb5a01618f519ec697dca80.mesh"]
 
-source_file="res://3D models/Coin/tinker.obj"
-dest_files=["res://.godot/imported/tinker.obj-4775efc5fc03ef1cf36f579e8d17e08e.mesh", "res://.godot/imported/tinker.obj-4775efc5fc03ef1cf36f579e8d17e08e.mesh"]
+source_file="res://3D models/coin/tinker.obj"
+dest_files=["res://.godot/imported/tinker.obj-4cab8745afb5a01618f519ec697dca80.mesh", "res://.godot/imported/tinker.obj-4cab8745afb5a01618f519ec697dca80.mesh"]
 
 [params]
 
