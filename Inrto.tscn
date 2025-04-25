@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://ddm6o80kkrv7a"]
+[gd_scene load_steps=29 format=3 uid="uid://ddm6o80kkrv7a"]
 
 [ext_resource type="Texture2D" uid="uid://cy5cpdoure86h" path="res://Textures/Marble012_1K-JPG_Color.jpg" id="1_ojuhq"]
 [ext_resource type="Script" path="res://Label.gd" id="1_pmehu"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c2y3xjua4cuaw" path="res://buzzsaw.tscn" id="11_js8pn"]
 [ext_resource type="Script" path="res://buzzsaw.gd" id="12_q4vr1"]
 [ext_resource type="PackedScene" uid="uid://x3ypw8lxkiav" path="res://transparent.tscn" id="14_7bt7u"]
+[ext_resource type="Script" path="res://transparent.gd" id="15_2kx0i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8qyx"]
 albedo_texture = ExtResource("1_ojuhq")
@@ -393,7 +394,8 @@ transform = Transform3D(-2.62267e-07, -0.0178023, 5.99997, -7.78165e-10, 5.99997
 script = ExtResource("12_q4vr1")
 
 [node name="Node3D" parent="." instance=ExtResource("14_7bt7u")]
-transform = Transform3D(21, 0, 0, 0, 1, 0, 0, 0, 21, -0.317192, -26.8962, -36.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317192, -25.9566, -36.4661)
+script = ExtResource("15_2kx0i")
 
 [connection signal="timeout" from="Control/Time/Timer" to="Control/Time" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
@@ -404,3 +406,5 @@ transform = Transform3D(21, 0, 0, 0, 1, 0, 0, 0, 21, -0.317192, -26.8962, -36.46
 [connection signal="coinCollected" from="Coin3" to="Control/Coins" method="_on_area_3d_coin_collected"]
 [connection signal="body_entered" from="Buzzsaw" to="Buzzsaw" method="_on_body_entered"]
 [connection signal="lifeLost" from="Buzzsaw" to="Control/Lives" method="_on_buzzsaw_life_lost"]
+[connection signal="body_entered" from="Node3D" to="Node3D" method="_on_body_entered"]
+[connection signal="timeReset" from="Node3D" to="Control/Time" method="_on_node_3d_time_reset"]

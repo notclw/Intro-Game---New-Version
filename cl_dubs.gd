@@ -39,3 +39,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+
+
+func _on_node_3d_body_entered(body):
+	emit_signal("timeReset")

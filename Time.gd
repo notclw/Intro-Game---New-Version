@@ -20,3 +20,7 @@ func _on_timer_timeout():
 	if time == 0:
 		$Timer.stop()
 		get_tree().change_scene_to_file("res://game over.tscn")
+
+
+func _on_node_3d_time_reset():
+	time = 76
